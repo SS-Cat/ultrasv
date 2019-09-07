@@ -1,0 +1,25 @@
+{
+  "name": "ultrasv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.pug",
+    "devopen": "parcel index.pug --open",
+    "build": "parcel build index.pug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
+    "parcel": "^1.12.3",
+    "parcel-plugin-imagemin": "^3.0.0",
+    "pug": "^2.0.4",
+    "sass": "^1.23.0-module.beta.1"
+  },
+  "dependencies": {
+    "siema": "^1.5.1"
+  }
+}

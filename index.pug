@@ -1,0 +1,76 @@
+doctype html
+html(lang="pt-BR")
+  head
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title UltraSV [beta]
+    link(href='./css/main.scss' rel='stylesheet' type='text/css')
+    //- <link href="https://fonts.googleapis.com/css?family=Livvic|Montserrat|Roboto&display=swap" rel="stylesheet">
+  body(style='overflow: hidden')
+    header.welcome__header
+      .welcome__image-container
+        img.welcome__image(src='./images/fundo.jpg')
+
+      .welcome__container
+        h1.welcome__title ULTRA SV
+        h2.welcome__subtitle Soluções em Vendas
+        p.welcome__text Bem vindos ao nosso site!
+        a.welcome__button INICIAR
+        span.welcome__icon
+          i.fas.fa-chevron-down
+
+    nav.navbar__main
+      .navbar__container
+        .navbar__logo-wrapper
+          img.navbar__logo(src="./images/logo-grey.svg", alt="")
+        .navbar__nav-wrapper
+          ul.navbar__item-container
+            li.navbar__item
+              a.navbar__item-link(href="#home") Home
+            li.navbar__item
+              a.navbar__item-link(href="#about") Sobre Nós
+            li.navbar__item
+              a.navbar__item-link(href="") Parceiros
+            li.navbar__item
+              a.navbar__item-link(href="") Produtos
+            li.navbar__item
+              a.navbar__item-link(href="") Contato
+      img.navbar__image(src="./images/nav2.jpg", alt="", srcset="")
+
+      //- img(src="./images/nav.svg", alt="", srcset="")
+    main.content
+      article.content__home#home
+        ul.content__home-slider.siema
+          li.content__home-slider-cell
+            img.content__home-img(src="./images/home2.jpg", alt="", srcset="")
+            .content__home-text= home_text
+          li
+            img.content__home-img(src="./images/home2.jpg", alt="", srcset="")
+          li
+            img.content__home-img(src="./images/home2.jpg", alt="", srcset="")
+
+        span.content__home-slider--left
+          i.fas.fa-angle-left
+        span.content__home-slider--right
+          i.fas.fa-angle-right
+
+
+      article.content__about#about
+        .content__about-container
+          .content__about-text--grey
+            h1.content__about-text-title Ultra Sv
+            p= about
+          .content__about-text--white
+            h1.content__about-text-title--white História
+            p= about2
+        .content__about-container
+          .content__about-icon--white
+            span Missão
+          .content__about-icon--grey
+            span Visão
+          .content__about-icon--white
+            span Valores
+
+
+    script(src='./js/main.js')
