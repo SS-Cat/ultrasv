@@ -4514,6 +4514,7 @@ readers do not read off random characters that represent icons */
   color: #000;
   display: inline;
   transition: 0.3s background-color;
+  cursor: pointer;
 }
 .navbar__item-container {
   list-style: none;
@@ -4622,6 +4623,14 @@ readers do not read off random characters that represent icons */
 .content__about-icon--grey {
   background-color: #353239;
   color: white;
+}
+
+.separator {
+  display: block;
+  background-color: #353239;
+  height: 3px;
+  margin: 2px 0;
+  width: 100%;
 }
 
 article {
