@@ -57,7 +57,6 @@ html(lang="pt-BR")
 
       div.separator
 
-
       article.content__about#about
         .content__about-container
           .content__about-text--grey
@@ -67,12 +66,27 @@ html(lang="pt-BR")
             h1.content__about-text-title--white História
             p= about2
         .content__about-container
-          .content__about-icon--white
-            span Missão
-          .content__about-icon--grey
-            span Visão
-          .content__about-icon--white
-            span Valores
+          .flip-card
+              .flip-card-inner
+                .flip-card-front--white
+                  img(src="./images/noun_target.svg", alt="", srcset="")
+                  span Missão
+                .flip-card-back--grey
+                  span= missao
+          .flip-card
+              .flip-card-inner
+                .flip-card-front--grey
+                  img(src="./images/noun_binoculars.svg", alt="", srcset="")
+                  span Visão
+                .flip-card-back--grey
+                  span= visao
+          .flip-card
+              .flip-card-inner
+                .flip-card-front--white
+                  img(src="./images/noun_presentation.svg", alt="", srcset="")
+                  span Valores
+                .flip-card-back--grey
+                  span= valores
 
 
     script(src='./js/main.js')
