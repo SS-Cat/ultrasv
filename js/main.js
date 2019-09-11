@@ -47,35 +47,41 @@ welcomeButton.addEventListener('click', () => {
 const nav = document.querySelector('.navbar__main')
 
 window.addEventListener('load', () => {
+  if ('scrollRestoration' in history) {
+    // Back off, browser, I got this...
+    history.scrollRestoration = 'manual';
+  }
+
   if (window.location.hash) {
     welcomeButton.click()
 
-    // if (window.location.hash !== '#home') {
-      setTimeout(() => {
-        window.scroll({
-          top: document.querySelector(window.location.hash).offsetTop - nav.offsetHeight,
-          behavior: 'smooth'
-        })
-      }, 1000);
-    // }
+    setTimeout(() => {
+      window.scroll({
+        top: document.querySelector(window.location.hash).offsetTop - nav.offsetHeight,
+        behavior: 'smooth'
+      })
+    }, 1000);
   }
 })
 
-const home = document.querySelector('#home')
-const sobre = document.querySelector('#about')
+const navItems = [
+  '#home',
+  '#about',
+  '#partners',
+  '#products',
+  '#contact',
+]
 
-document.querySelector('.navbar__item-link[href="#home"]').addEventListener('click', event => {
-  event.preventDefault()
-  window.scroll({
-    top: home.offsetTop - nav.offsetHeight,
-    behavior: 'smooth'
-  })
-})
+navItems.forEach(item => {
 
-document.querySelector('.navbar__item-link[href="#about"]').addEventListener('click', event => {
-  event.preventDefault()
-  window.scroll({
-    top: sobre.offsetTop - nav.offsetHeight,
-    behavior: 'smooth'
+  const itemNode = document.querySelector(item)
+
+  document.querySelector(`.navbar__item-link[href="${item}"]`).addEventListener('click', event => {
+    event.preventDefault()
+    window.location.hash = item
+    window.scroll({
+      top: itemNode.offsetTop - nav.offsetHeight,
+      behavior: 'smooth'
+    })
   })
 })

@@ -31,11 +31,11 @@ html(lang="pt-BR")
             li.navbar__item
               a.navbar__item-link(href="#about") Sobre Nós
             li.navbar__item
-              a.navbar__item-link(href="") Parceiros
+              a.navbar__item-link(href="#partners") Parceiros
             li.navbar__item
-              a.navbar__item-link(href="") Produtos
+              a.navbar__item-link(href="#products") Produtos
             li.navbar__item
-              a.navbar__item-link(href="") Contato
+              a.navbar__item-link(href="#contact") Contato
       img.navbar__image(src="./images/nav2.jpg", alt="", srcset="")
 
       //- img(src="./images/nav.svg", alt="", srcset="")
@@ -88,5 +88,37 @@ html(lang="pt-BR")
                 .flip-card-back--grey
                   span= valores
 
+      article.content__partners#partners
+        h1.content__partners-title Parceiros
+        .content__partners-container
+          .content__partners-box
+            .content__partners-box-icon
+              img(src="./images/logo-grey.svg", alt="", srcset="")
+            .content__partners-box-text
+              h2 Ultra SV
+              p= partner
+          .content__partners-box
+            .content__partners-box-icon
+              img(src="./images/logo-grey.svg", alt="", srcset="")
+            .content__partners-box-text
+              h2 Ultra SV
+              p= partner
+          .content__partners-box
+            .content__partners-box-icon
+              img(src="./images/logo-grey.svg", alt="", srcset="")
+            .content__partners-box-text
+              h2 Ultra SV
+              p= partner
+
+      article.content__products#products
+        h1.content__partners-title Produtos
+          section.content__products-container.siema
+            .content__products-item
+              .content__products-item-card
+              .content__products-item-image
+
+
+      article.content__products#products
+        h1.content__partners-title Entre em contato
 
     script(src='./js/main.js')
