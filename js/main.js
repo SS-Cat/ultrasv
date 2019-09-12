@@ -6,8 +6,34 @@ const siema = new Siema({
   loop: true
 });
 
+const siema2 = new Siema({
+  selector: '.siema2',
+  duration: 300,
+  easing: 'cubic-bezier(1, -0.015, 1, -0.025)',
+  loop: true,
+  onChange() {
+    setTimeout(() => {
+      document.querySelectorAll('.content__products-item').forEach(e => e.style.opacity = 1)
+    }, 500)
+  }
+});
+
 document.querySelector('.content__home-slider--left').addEventListener('click', () => siema.prev())
 document.querySelector('.content__home-slider--right').addEventListener('click', () => siema.next())
+
+document.querySelectorAll('.content__products-slider-button--left').forEach(e => {
+
+  e.addEventListener('click', () => {
+    document.querySelectorAll('.content__products-item').forEach(e => e.style.opacity = 0)
+    siema2.prev()
+  })
+})
+document.querySelectorAll('.content__products-slider-button--right').forEach(e => {
+  e.addEventListener('click', () => {
+    document.querySelectorAll('.content__products-item').forEach(e => e.style.opacity = 0)
+    siema2.next()
+  })
+})
 
 const animationTime = 400
 const welcomeButton = document.querySelector('a.welcome__button')

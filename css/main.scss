@@ -351,7 +351,7 @@
       cursor: pointer;
       transition: 0.4s;
 
-      background: lighten($color: #EAECFB, $amount: 5%) ;
+      background: lighten($color: #EAECFB, $amount: 5%);
 
       overflow: hidden;
 
@@ -359,7 +359,7 @@
         height: 300px;
         transform: scale(0.95, 0.95);
         // box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.25),
-          // -5px -5px 20px 10px rgba(0, 0, 0, 0.22);
+        // -5px -5px 20px 10px rgba(0, 0, 0, 0.22);
       }
 
 
@@ -390,16 +390,16 @@
         color: #686868;
 
         border-top: 2px dashed rgba(0, 0, 0, 0.4);
-        
+
         flex-grow: 2;
 
-        & > p {
+        &>p {
           font-size: .9rem;
           padding: 0 5%;
 
         }
 
-        & > h2 {
+        &>h2 {
           padding: 0 5%;
 
           font-size: 1.3rem;
@@ -409,7 +409,69 @@
         }
       }
     }
+  }
 
+  &__products {
+
+    margin: 8% 0;
+
+    &-container {
+      margin-right: auto;
+      margin-left: auto;
+
+      max-width: 980px;
+
+      padding-right: 10px;
+      padding-left: 10px;
+
+    }
+
+    &-slider {
+      &-container {
+        display: flex;
+        font-size: 2rem;
+      }
+
+      &-button {
+        margin: 0 10%;
+        cursor: pointer;
+
+        &--left, &--right {
+          @extend .content__products-slider-button;
+        }
+      }
+    }
+
+    &-item {
+      position: relative;
+      transition: all .2s ease-out;
+
+      &-image {
+        width: 80%;
+      }
+
+      &-card {
+        &__title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 2% 0;
+          font-size: 1.5rem;
+        }
+
+        position: absolute;
+        top: 30%;
+        right: 0;
+
+        height: 50%;
+        width: 60%;
+        padding: 30px;
+
+        background: white;
+        // border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 0px;
+      }
+    }
   }
 }
 
@@ -489,7 +551,7 @@
 
     &--white {
       @extend .flip-card-back;
-      background-color: white;
+      background-color: #EAECFB;
       color: #686868;
     }
 

@@ -71,7 +71,7 @@ html(lang="pt-BR")
                 .flip-card-front--white
                   img(src="./images/noun_target.svg", alt="", srcset="")
                   span Missão
-                .flip-card-back--grey
+                .flip-card-back--white
                   span= missao
           .flip-card
               .flip-card-inner
@@ -85,7 +85,7 @@ html(lang="pt-BR")
                 .flip-card-front--white
                   img(src="./images/noun_presentation.svg", alt="", srcset="")
                   span Valores
-                .flip-card-back--grey
+                .flip-card-back--white
                   span= valores
 
       article.content__partners#partners
@@ -95,27 +95,46 @@ html(lang="pt-BR")
             .content__partners-box-icon
               img(src="./images/logo-grey.svg", alt="", srcset="")
             .content__partners-box-text
-              h2 Ultra SV
-              p= partner
+              h2= parceiros[0].titulo
+              p= parceiros[0].texto
           .content__partners-box
             .content__partners-box-icon
               img(src="./images/logo-grey.svg", alt="", srcset="")
             .content__partners-box-text
-              h2 Ultra SV
-              p= partner
+              h2= parceiros[1].titulo
+              p= parceiros[1].texto
           .content__partners-box
             .content__partners-box-icon
               img(src="./images/logo-grey.svg", alt="", srcset="")
             .content__partners-box-text
-              h2 Ultra SV
-              p= partner
+              h2= parceiros[2].titulo
+              p= parceiros[2].texto
 
       article.content__products#products
         h1.content__partners-title Produtos
-          section.content__products-container.siema
-            .content__products-item
-              .content__products-item-card
-              .content__products-item-image
+        section.content__products-container.siema2
+          .content__products-item
+            img(src="./images/img-04.jpg", alt="", srcset="").content__products-item-image
+            .content__products-item-card
+              .content__products-item-card__title
+                p= produtos[0].titulo
+                .content__products-slider-container
+                  span.content__products-slider-button--left
+                    i.fas.fa-angle-left
+                  span.content__products-slider-button--right
+                    i.fas.fa-angle-right
+              p= produtos[0].texto
+          .content__products-item
+            img(src="./images/img-05.jpg", alt="", srcset="").content__products-item-image
+            .content__products-item-card
+              .content__products-item-card__title
+                p= produtos[1].titulo
+                .content__products-slider-container
+                  span.content__products-slider-button--left
+                    i.fas.fa-angle-left
+                  span.content__products-slider-button--right
+                    i.fas.fa-angle-right
+              p= produtos[1].texto
 
 
       article.content__products#products
