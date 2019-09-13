@@ -44,6 +44,7 @@ html(lang="pt-BR")
         ul.content__home-slider.siema
           li.content__home-slider-cell
             img.content__home-img(src="./images/home2.jpg", alt="", srcset="")
+            .content__home-title Titulo
             .content__home-text= home_text
           li
             img.content__home-img(src="./images/home2.jpg", alt="", srcset="")
@@ -55,7 +56,8 @@ html(lang="pt-BR")
         span.content__home-slider--right
           i.fas.fa-angle-right
 
-      div.separator
+      div.separator__container
+        .separator
 
       article.content__about#about
         .content__about-container
@@ -137,7 +139,24 @@ html(lang="pt-BR")
               p= produtos[1].texto
 
 
-      article.content__products#products
+      article.content__contact#contact
         h1.content__partners-title Entre em contato
+        section.content__contact-container
+          .content__contact-form
+            form(method='POST' action=`https://formspree.io/${mail}`).content__contact-form-send
+              input(type='email' name='email' placeholder='Seu email')
+              input(type='text' name='subject' placeholder='Assunto')
+              textarea(name='message' placeholder='Insira sua mensagem aqui')
+              button(type='submit') Enviar
+
+            .content__contact-text 
+              p +55 77 9 9999 - 9999
+              p Salvador Brasil
+
+          img(src="./images/img-01.jpg", alt="", srcset="").content__contact-img
+
+    footer.footer
+      .footer__container
+      //- img(src="./images/wave-footer.svg", alt="", srcset="")
 
     script(src='./js/main.js')
