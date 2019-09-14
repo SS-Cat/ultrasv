@@ -581,7 +581,7 @@
         }
 
         &>textarea {
-          height: auto;
+          height: 140px;
         }
 
         &>button {
@@ -610,6 +610,7 @@
     }
 
     &-img {
+      overflow: hidden;
       margin-left: 20%;
       width: 80%;
     }
@@ -733,6 +734,135 @@
   }
 }
 
-// article:not(:first-of-type) {
-//   height: 100vh;
-// }
+@media (max-width: 650px) {
+  .welcome {
+    font-size: 4rem;
+
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+
+    &__text {
+      font-size: 1.2rem;
+    }
+
+    &__image {
+      // width: auto;
+      height: 100%;
+
+      &-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .content {
+    margin-top: 10vh;
+    &__home {
+      &-img {
+        width: auto;
+        height: 100vh;
+      }
+
+      &-text {
+        left: 9vw;
+        width: 80%;
+      }
+
+      &-title {
+        left: 14vw;
+        width: 70%;
+      }
+
+      &-slider-cell {
+        overflow: hidden;
+      }
+    }
+
+    &__about {
+      &-container {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      &-text {
+        height: 85vh;
+        padding: 10%;
+      }
+    }
+
+    &__contact {
+      &-container {
+        justify-content: flex-end;
+      }
+
+      &-img {
+        width: auto;
+        height: 100%;
+
+        &>img,
+        source {
+          height: 100%;
+        }
+      }
+
+      &-form {
+        height: 100%;
+        width: 90%;
+        padding: 5%;
+        flex-direction: column;
+        left: 0;
+
+        &-send {
+          width: 90%;
+        }
+      }
+    }
+
+    &__products {
+      &-container {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 340px;
+      }
+
+      &-item {
+        display: flex;
+        justify-content: flex-start;
+
+        &-card {
+          top: 40%;
+          width: 90%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    &__logo {
+      display: none;
+
+      &-wrapper {
+        display: none;
+      }
+    }
+    &__item {
+      margin: 0 !important;
+      font-size: 1rem;
+      &-container {
+        justify-content: space-evenly;
+      }
+    }
+
+    &__image {
+      height: 10vh;
+    }
+  }
+}

@@ -15,7 +15,10 @@ html(lang="pt-BR")
   body(style='overflow: hidden')
     header.welcome__header
       .welcome__image-container
-        img.welcome__image(src='./images/fundo.jpg')
+        picture
+          source(media='(max-width: 460px)' srcset='./images/fundo-croped.jpg').welcome__image
+          source(media='(min-width: 461px)' srcset='./images/fundo.jpg').welcome__image
+          img(src='./images/fundo.jpg').welcome__image
 
       .welcome__container
         h1.welcome__title ULTRA SV
@@ -154,11 +157,15 @@ html(lang="pt-BR")
               textarea(name='message' placeholder='Insira sua mensagem aqui')
               button(type='submit') Enviar
 
-            .content__contact-text 
+            .content__contact-text
               p +55 77 9 9999 - 9999
               p Salvador Brasil
 
-          img(src="./images/img-01.jpg", alt="", srcset="").content__contact-img
+          picture.content__contact-img
+            source(media='(max-width: 460px)' srcset='./images/contact-img-croped.jpg')
+            source(media='(min-width: 461px)' srcset='./images/contact-img.jpg')
+            img(src="./images/contact-img.jpg", alt="", srcset="")
+
 
     footer.footer
       .footer__container
