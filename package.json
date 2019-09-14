@@ -20,6 +20,7 @@
     "sass": "^1.23.0-module.beta.1"
   },
   "dependencies": {
-    "siema": "^1.5.1"
+    "siema": "^1.5.1",
+    "web-animations-js": "^2.3.2"
   }
 }

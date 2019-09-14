@@ -1,3 +1,4 @@
+import 'web-animations-js'
 import Siema from 'siema';
 
 const siema = new Siema({
