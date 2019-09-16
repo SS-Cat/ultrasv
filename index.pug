@@ -68,6 +68,7 @@ html(lang="pt-BR")
         .separator
 
       article.content__about#about
+        h1.content__partners-title Sobre Nós
         .content__about-container
           .content__about-text--grey
             h1.content__about-text-title Ultra Sv
@@ -158,13 +159,27 @@ html(lang="pt-BR")
               button(type='submit') Enviar
 
             .content__contact-text
-              p +55 77 9 9999 - 9999
               p Salvador Brasil
+              a(href="mailto:comercial@ultrasv.com.br") comercial@ultrasv.com.br
+              a(href="tel:+5571981010203") (71)98101 0203
+              a(href="tel:+5571981223778") (71)98122 3778
+              a(href="tel:+5571981223722") (71)98122 3722
 
           picture.content__contact-img
             source(media='(max-width: 460px)' srcset='./images/contact-img-croped.jpg')
             source(media='(min-width: 461px)' srcset='./images/contact-img.jpg')
             img(src="./images/contact-img.jpg", alt="", srcset="")
+
+      article.content__local
+        h1.content__partners-title Local
+        section.content__local
+          iframe.content__local-map(width='425' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://www.openstreetmap.org/export/embed.html?bbox=-38.75839233398438%2C-13.075465253049035%2C-38.23242187500001%2C-12.680535335290262&layer=mapnik&marker=-12.878078089985115%2C-38.49540710449219')
+          br
+          small.content__local-link
+            a.content__local-link(href='https://www.openstreetmap.org/?mlat=-12.8781&mlon=-38.4954#map=11/-12.8781/-38.4954')
+              | View Larger Map
+
+
 
 
     footer.footer

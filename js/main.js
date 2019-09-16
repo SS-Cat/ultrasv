@@ -1,5 +1,5 @@
 import 'web-animations-js'
-import Siema from 'siema';
+import Siema from 'siema'
 
 const siema = new Siema({
   duration: 200,
@@ -23,7 +23,6 @@ document.querySelector('.content__home-slider--left').addEventListener('click', 
 document.querySelector('.content__home-slider--right').addEventListener('click', () => siema.next())
 
 document.querySelectorAll('.content__products-slider-button--left').forEach(e => {
-
   e.addEventListener('click', () => {
     document.querySelectorAll('.content__products-item').forEach(e => e.style.opacity = 0)
     siema2.prev()
